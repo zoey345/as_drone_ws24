@@ -7,6 +7,8 @@
   <arg name="left_info_topic" default="/realsense/rgb/left_image_info" />
   <arg name="depth_image_topic" default="/realsense/depth/image" />
   <arg name="depth_info_topic" default="/realsense/depth/camera_info" />
+  <arg name="semantic_image_topic" default="/realsense/semantic/image_raw" />
+  <arg name="semantic_info_topic" default="/realsense/semantic/camera_info" />
 
   <include file="$(find simulation)/launch/unity_ros.launch" >
     <arg name="load_params" value="$(arg load_params)" />
@@ -16,6 +18,8 @@
     <arg name="left_info_topic" value="$(arg left_info_topic)" />
     <arg name="depth_image_topic" value="$(arg depth_image_topic)" />
     <arg name="depth_info_topic" value="$(arg depth_info_topic)" />
+    <arg name="semantic_image_topic" value="$(arg semantic_image_topic)" />
+    <arg name="semantic_info_topic" value="$(arg semantic_info_topic)" />
   </include>
 
   <node name="Simulation" pkg="simulation" type="Simulation.x86_64"/>
@@ -41,9 +45,6 @@
   <node name="w_to_unity" pkg="simulation" type="w_to_unity"/>
   
   <node name="controller_node" pkg="controller_pkg" type="controller_node"/>
-  
-
-
 
   <node pkg="tf2_ros" type="static_transform_publisher"
         name="sim_true_body"      args="0 0 0 0 0 0 /Quadrotor/TrueState /true_body" />
@@ -57,9 +58,16 @@
   <node pkg="tf2_ros" type="static_transform_publisher"
         name="sim_right_camera"      args="0 0.05 0 0 0 0 /camera /Quadrotor/RGBCameraRight" />
 
+  <!-- Adjusted camera_to_body transformation to fine-tune camera positioning -->
+  <!-- Adjusted depth_camera_to_body transformation to optimize camera alignment -->
   <node pkg="tf2_ros" type="static_transform_publisher"
-        name="camera_to_body"      args="0 0 0 0 0 0 /true_body /camera" />
+        name="camera_to_body"      args="0.2 0 0 0 0 0 /body /camera" />
 
   <node pkg="tf2_ros" type="static_transform_publisher"
-        name="depth_camera_to_body"      args="0 0 0 0 0 0 /true_body /depth_camera" />
+        name="depth_camera_to_body"      args="0 0 0 0 0 0 /camera /depth_camera" />
+
+<!-- 90 degrees rotation about X axis from true_body to Depth Camera Frame -->
+  <node pkg="tf2_ros" type="static_transform_publisher"
+        name="depth_cam_sensors"      args="0 0 0 -1.5708 0 -1.5708 /depth_camera /Quadrotor/Sensors/DepthCamera" />
+
 </launch>
