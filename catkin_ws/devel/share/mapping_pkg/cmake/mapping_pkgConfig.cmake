@@ -1,0 +1,1 @@
+/home/song/as_drone_ws24/catkin_ws/devel/.private/mapping_pkg/share/mapping_pkg/cmake/mapping_pkgConfig.cmake

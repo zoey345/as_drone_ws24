@@ -1,0 +1,1 @@
+/home/song/as_drone_ws24/catkin_ws/devel/.private/nav_msgs/share/roseus/ros/nav_msgs/msg/GetMapResult.l

@@ -1,0 +1,1 @@
+/home/song/as_drone_ws24/catkin_ws/devel/.private/mav_msgs/share/mav_msgs/cmake/mav_msgs-msg-extras.cmake

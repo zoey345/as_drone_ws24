@@ -1,0 +1,4 @@
+Symlinking /home/song/as_drone_ws24/catkin_ws/devel/share/mapping_pkg/cmake/mapping_pkgConfig-version.cmake
+Symlinking /home/song/as_drone_ws24/catkin_ws/devel/share/mapping_pkg/cmake/mapping_pkgConfig.cmake
+Symlinking /home/song/as_drone_ws24/catkin_ws/devel/lib/mapping_pkg/mapping_pkg_node
+Symlinking /home/song/as_drone_ws24/catkin_ws/devel/lib/pkgconfig/mapping_pkg.pc

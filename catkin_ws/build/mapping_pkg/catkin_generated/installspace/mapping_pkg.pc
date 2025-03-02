@@ -1,0 +1,8 @@
+prefix=/home/song/as_drone_ws24/catkin_ws/install
+
+Name: mapping_pkg
+Description: Description of mapping_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge std_msgs tf image_geometry pcl_conversions pcl_ros depth_image_proc sensor_msgs geometry_msgs

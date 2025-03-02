@@ -1,0 +1,13 @@
+# Target labels
+ libsocket
+# Source files and their labels
+/home/song/as_drone_ws24/catkin_ws/build/simulation/CMakeFiles/libsocket
+/home/song/as_drone_ws24/catkin_ws/build/simulation/CMakeFiles/libsocket.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/CMakeFiles/libsocket-complete.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-install.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-mkdir.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-download.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-update.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-patch.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-configure.rule
+/home/song/as_drone_ws24/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-build.rule
