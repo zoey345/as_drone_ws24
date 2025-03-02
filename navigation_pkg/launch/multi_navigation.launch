@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find navigation_pkg)/launch/Planner.launch"/>
+    <include file="$(find navigation_pkg)/launch/waypoint_navigation.launch"/>
+    <include file="$(find navigation_pkg)/launch/frontier_exploration.launch"/>
+</launch>
