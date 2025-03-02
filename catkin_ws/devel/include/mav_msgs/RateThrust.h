@@ -1,1 +1,0 @@
-/home/song/as_drone_ws24/catkin_ws/devel/.private/mav_msgs/include/mav_msgs/RateThrust.h

@@ -1,1 +1,0 @@
-/home/song/as_drone_ws24/catkin_ws/devel/.private/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig.cmake

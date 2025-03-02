@@ -1,1 +1,0 @@
-/home/song/as_drone_ws24/catkin_ws/devel/.private/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/_CpuInfo.py

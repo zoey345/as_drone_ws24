@@ -1,6 +1,0 @@
-/home/song/as_drone_ws24/catkin_ws/build/utils/CMakeFiles/install/strip.dir
-/home/song/as_drone_ws24/catkin_ws/build/utils/CMakeFiles/install/local.dir
-/home/song/as_drone_ws24/catkin_ws/build/utils/CMakeFiles/install.dir
-/home/song/as_drone_ws24/catkin_ws/build/utils/CMakeFiles/list_install_components.dir
-/home/song/as_drone_ws24/catkin_ws/build/utils/CMakeFiles/rebuild_cache.dir
-/home/song/as_drone_ws24/catkin_ws/build/utils/CMakeFiles/edit_cache.dir
