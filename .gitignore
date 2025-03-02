@@ -1,0 +1,17 @@
+# 忽略 ROS 编译生成的文件和文件夹
+build/
+devel/
+install/
+log/
+logs/
+.bag
+.bag.active
+.bag.metadata
+.bag.tmp
+*.pyc
+*.pyo
+*.swp
+*.swo
+.DS_Store
+.vscode/
+.idea/
