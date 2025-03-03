@@ -1,0 +1,40 @@
+<launch>
+
+  <!-- Nodelet Manager for depth processing -->
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" />
+
+  <!-- Convert Depth Image to Point Cloud -->
+  <node pkg="nodelet" type="nodelet" name="depth_to_cloud"
+        args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/realsense/depth/camera_info"/>
+    <remap from="image_rect" to="/realsense/depth/image"/>
+    <remap from="points" to="/point_cloud"/>
+  </node>
+
+  <!-- Node for OctoMap Server -->
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server" output="screen">
+    <remap from="cloud_in" to="/point_cloud"/>
+
+    <!-- OctoMap parameters -->
+    <param name="frame_id" value="world"/>
+    <param name="latch" value="false"/> <!-- Set latch to false for dynamic parameter updates -->
+    <param name="resolution" value="2"/>
+    <param name="sensor_model/max_range" value="32"/> <!-- Max sensor range tuning -->
+  </node>
+
+  <!-- Node for Semantic Mask Processing -->
+  <node pkg="light_detector_pkg" type="semantic_mask_node" name="SemanticMaskNode" output="screen">
+    <remap from="/realsense/semantic/image_raw" to="/realsense/semantic/image_raw"/>
+    <remap from="/realsense/depth/image" to="/realsense/depth/image"/>
+    <remap from="/realsense/depth/camera_info" to="/realsense/depth/camera_info"/>
+    <remap from="masked_depth_image" to="/masked_depth_image"/>
+  </node>
+
+  <!-- Node for Light Detection -->
+  <node pkg="light_detector_pkg" type="light_detector_node" name="LightDetectorNode" output="screen">
+    <remap from="masked_depth_image" to="/masked_depth_image"/>
+    <remap from="realsense/depth/camera_info" to="/realsense/depth/camera_info"/>
+    <remap from="detected_points" to="/detected_points"/>
+  </node>
+
+</launch>
