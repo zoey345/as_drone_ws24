@@ -1,0 +1,6 @@
+<launch>
+      <node pkg="pathplanning_pkg" type="frontierest_node" name="frontierest_node" output="screen">
+        <param name="use_rosrun" value="true"/>
+    </node>
+</launch>
+

@@ -1,0 +1,5 @@
+launch_pkg
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/launch_pkg/cmake.lock /home/jiaxiang/as_drone_ws24/catkin_ws/devel/./cmake.lock
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/launch_pkg/share/launch_pkg/cmake/launch_pkgConfig.cmake /home/jiaxiang/as_drone_ws24/catkin_ws/devel/share/launch_pkg/cmake/launch_pkgConfig.cmake
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/launch_pkg/share/launch_pkg/cmake/launch_pkgConfig-version.cmake /home/jiaxiang/as_drone_ws24/catkin_ws/devel/share/launch_pkg/cmake/launch_pkgConfig-version.cmake
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/launch_pkg/lib/pkgconfig/launch_pkg.pc /home/jiaxiang/as_drone_ws24/catkin_ws/devel/lib/pkgconfig/launch_pkg.pc

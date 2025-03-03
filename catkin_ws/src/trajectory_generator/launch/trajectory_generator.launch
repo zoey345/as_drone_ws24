@@ -1,0 +1,10 @@
+<launch>
+    <!-- 启动 trajectory_generator 节点 -->
+    <node name="trajectory_generator_node" pkg="trajectory_generator" type="trajectory_generator_node" output="screen" />
+
+
+    <!--- Trajectory sampler -->
+    <node name="sampler" pkg="mav_trajectory_generation_ros" type="trajectory_sampler_node" output="screen">
+        <remap from="path_segments_4D" to="trajectory"/>
+    </node>
+</launch>

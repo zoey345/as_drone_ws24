@@ -1,0 +1,8 @@
+navigation_pkg
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/cmake.lock /home/jiaxiang/as_drone_ws24/catkin_ws/devel/./cmake.lock
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/share/navigation_pkg/cmake/navigation_pkgConfig.cmake /home/jiaxiang/as_drone_ws24/catkin_ws/devel/share/navigation_pkg/cmake/navigation_pkgConfig.cmake
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/share/navigation_pkg/cmake/navigation_pkgConfig-version.cmake /home/jiaxiang/as_drone_ws24/catkin_ws/devel/share/navigation_pkg/cmake/navigation_pkgConfig-version.cmake
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/lib/pkgconfig/navigation_pkg.pc /home/jiaxiang/as_drone_ws24/catkin_ws/devel/lib/pkgconfig/navigation_pkg.pc
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/lib/navigation_pkg/Planner /home/jiaxiang/as_drone_ws24/catkin_ws/devel/lib/navigation_pkg/Planner
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/lib/navigation_pkg/navigation_pkg /home/jiaxiang/as_drone_ws24/catkin_ws/devel/lib/navigation_pkg/navigation_pkg
+/home/jiaxiang/as_drone_ws24/catkin_ws/devel/.private/navigation_pkg/lib/navigation_pkg/frontier_exploration /home/jiaxiang/as_drone_ws24/catkin_ws/devel/lib/navigation_pkg/frontier_exploration

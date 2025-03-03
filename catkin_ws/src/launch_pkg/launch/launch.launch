@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find simulation)/launch/simulation.launch" />
+    <include file="$(find mapping_pkg)/launch/mapping.launch" />
+    <include file="$(find state_machine_pkg)/launch/state_machine.launch" />
+    <!---<include file="$(find trajectory_generator)/launch/trajectory_generator.launch" /> -->
+    <include file="$(find pathplanning_pkg)/launch/Planner.launch" /> 
+    <include file="$(find pathplanning_pkg)/launch/frontierest_node.launch" /> 
+    <!---<node name="rviz" pkg="rviz" type="rviz" args="-d $(find simulation)/launch/rviz_configuration.rviz" />-->
+</launch>
