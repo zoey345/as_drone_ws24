@@ -1,6 +1,0 @@
-light_detector_pkg
-/home/song/as_drone_ws24/catkin_ws/devel/.private/light_detector_pkg/cmake.lock /home/song/as_drone_ws24/catkin_ws/devel/./cmake.lock
-/home/song/as_drone_ws24/catkin_ws/devel/.private/light_detector_pkg/share/light_detector_pkg/cmake/light_detector_pkgConfig.cmake /home/song/as_drone_ws24/catkin_ws/devel/share/light_detector_pkg/cmake/light_detector_pkgConfig.cmake
-/home/song/as_drone_ws24/catkin_ws/devel/.private/light_detector_pkg/share/light_detector_pkg/cmake/light_detector_pkgConfig-version.cmake /home/song/as_drone_ws24/catkin_ws/devel/share/light_detector_pkg/cmake/light_detector_pkgConfig-version.cmake
-/home/song/as_drone_ws24/catkin_ws/devel/.private/light_detector_pkg/lib/light_detector_pkg/light_detector_node /home/song/as_drone_ws24/catkin_ws/devel/lib/light_detector_pkg/light_detector_node
-/home/song/as_drone_ws24/catkin_ws/devel/.private/light_detector_pkg/lib/pkgconfig/light_detector_pkg.pc /home/song/as_drone_ws24/catkin_ws/devel/lib/pkgconfig/light_detector_pkg.pc

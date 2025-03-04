@@ -37,4 +37,6 @@
     <remap from="detected_points" to="/detected_points"/>
   </node>
 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find light_detector_pkg)/launch/rviz_configuration.rviz" />
+
 </launch>
