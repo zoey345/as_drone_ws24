@@ -18,11 +18,6 @@
 #include <pcl/filters/extract_indices.h>
 #include <vector>
 
-// Hypothetical GitHub repository URLs remain unchanged
-// Source for Octomap integration: https://github.com/OctoMap/octomap_ros
-// Source for the OPTICS clustering algorithm:
-// https://github.com/Nandite/Pcl-Optics/tree/master
-
 class FrontierEstimationNode {
 public:
   FrontierEstimationNode() {
@@ -46,7 +41,7 @@ private:
   std::shared_ptr<octomap::OcTree> octree{};
   octomap::point3d current_position;
   std::vector<geometry_msgs::Point> frontier_points;
-  int octomap_resolution, max_distance; // Example max distance
+  int octomap_resolution, max_distance; 
   std::vector<pcl::PointIndicesPtr> cluster_indices;
 
   void currentStateCallback(const nav_msgs::Odometry &msg) {
@@ -73,7 +68,7 @@ private:
       std::cout << "[INFO] cloud contains " << frontier_cloud->size() << " points." << std::endl;
     }
 
-    // Assuming Optics::optics method exists and works as expected
+   
     Optics::optics<pcl::PointXYZ>(frontier_cloud, 5, 10.0, cluster_indices);
 
     auto largest_cluster_cloud = identifyLargestCluster(frontier_cloud);
@@ -85,7 +80,7 @@ private:
   }
 
   pcl::PointCloud<pcl::PointXYZ>::Ptr generateFrontierCloud() {
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>); // Use boost::shared_ptr
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>); 
     cloud->header.frame_id = "world";
     cloud->is_dense = false;
 
@@ -200,32 +195,29 @@ private:
   }
  
   bool isFrontierPoint(const octomap::point3d &coord) {
-    // Define the search offsets to check the immediate neighbors in 3D,
-    // including diagonals
     std::vector<octomap::point3d> searchOffsets =
         {{1, 0, 0},   {-1, 0, 0},   {0, 1, 0},
          {0, -1, 0},  {0, 0, 1},    {0, 0, -1},
          {1, 1, 0},   {-1, -1, 0},  {1, -1, 0},
-         {-1, 1, 0}, // Diagonals in XY plane
+         {-1, 1, 0}, 
          {1, 0, 1},   {-1, 0, -1},  {0, 1, 1},
-         {0, -1, -1}, // Diagonals in XZ and YZ planes
+         {0, -1, -1}, 
          {-1, 0, 1},  {1, 0, -1},   {0, -1, 1},
-         {0, 1, -1}, // Opposite diagonals
+         {0, 1, -1}, 
          {1, 1, 1},   {-1, -1, -1}, {1, -1, 1},
-         {-1, 1, -1}, // 3D diagonals
+         {-1, 1, -1}, 
          {1, 1, -1},  {-1, -1, 1},  {1, -1, -1},
          {-1, 1, 1}};
 
     for (const auto &offset : searchOffsets) {
       octomap::point3d neighborCoord =
-          coord + offset * octomap_resolution; // Adjust by octomap resolution
+          coord + offset * octomap_resolution; 
       octomap::OcTreeNode *node = octree->search(neighborCoord);
-      if (!node) { // If the node does not exist (is unknown)
+      if (!node) { 
         return true;
       }
     }
-    return false; // If all neighbors are known (occupied or free), it's not a
-                // frontier
+    return false; 
   }
   
   void publishGoal(const pcl::PointXYZ &goal) {
@@ -233,7 +225,7 @@ private:
     goal_msg.x = goal.x;
     goal_msg.y = goal.y;
     goal_msg.z = goal.z;
-    if(goal_msg.x<=-340.0){goal_publisher.publish(goal_msg);}//If the drone is at the entrance of the cave, send the frontier_goal
+    if(goal_msg.x<=-340.0){goal_publisher.publish(goal_msg);}
   }
 };
 
